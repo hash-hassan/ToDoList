@@ -1,0 +1,24 @@
+.foreFront
+{
+    background-color: white;
+}
+.stretched
+{
+    width: 100%;
+}
+
+.desktop
+{
+    background-color: rgb(43, 201, 190);
+}
+
+.btn-submit
+{
+    background-color: forestgreen
+}
+
+.btn-cancel:hover
+{
+    background-color: crimson;
+    
+}

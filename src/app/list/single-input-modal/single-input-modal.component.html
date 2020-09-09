@@ -1,0 +1,15 @@
+
+
+<div class="m-auto rounded desktop p-4">
+    <p style="font-weight: 600; font-size: 18px;">{{data.head}}</p>
+    <form [formGroup]="modalForm" (ngSubmit) = onSubmit()>
+        <div class="formGroup">
+            <input type="text" formControlName = "_input" class="form-control stretched" placeholder = {{data.placeholder}} >
+            <span *ngIf = "put.invalid && put.touched" class="invalid-feedback">Please fill out this field.</span>
+        </div>
+        <div class="m-3 stretched clearfix pr-3">
+            <button [disabled] = "modalForm.invalid" type="submit" class="btn btn-primary m-1 float-right">Create</button>
+            <button class="btn border-dark m-1 float-right btn-cancel" (click) = "cancel()">Cancel</button>
+        </div>
+    </form>
+</div>

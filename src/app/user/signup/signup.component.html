@@ -1,0 +1,31 @@
+<div class="container-fluid desktop w-100 sizing">
+    <div class="row sizing">
+      
+      <div class="col-sm-4"></div>
+      
+      <div class="col-sm-4 my-auto foreFront mx-auto p-sm-4">
+       
+          <h2 class="pb-sm-3 head">SIGN UP</h2>
+          <form #signUp = "ngForm" (ngSubmit) = "onSubmit(signUp.value)" class="w-100">
+            <div class="form-group has-feedback">
+              <!-- <i class="fas fa-envelope icon form-control-feedback"></i>         -->
+              <input required ngModel type="text" class="form-control w-100" placeholder="Username" name="username" />
+            </div>
+            <div class="form-group">
+              <input required ngModel type="password" class="form-control w-100" id="pwd" placeholder="Enter password" name="pswd">
+            </div>
+            <div *ngIf = "isInValidCred" class="error">
+              <span>Username or password is incorrect</span>
+            </div>
+            <div class="d-flex align-items-end">
+              <button [disabled] = "signUp.invalid" type="submit" class="btn ml-auto desktop border-color">Sign up!</button>
+            </div>
+          </form>
+        <p class="pt-sm-4 text-center">Alredy got an account?<br> Login here!</p>
+        
+      </div>
+      
+      <div class="col-sm-4"></div>
+
+    </div>
+</div>
