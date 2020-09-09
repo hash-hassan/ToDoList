@@ -1,6 +1,13 @@
 .desktop
 {
-    background-color: rgb(43, 201, 190);
+    /* background-color: rgb(43, 201, 190); */
+    background-image: url(../../../assets/image.jpg);
+    height: 100%;
+    color: black;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .sizing
@@ -11,24 +18,47 @@
 
 .foreFront
 {
-    background-color: white;
+    background-color: rgba(201, 191, 183, 0.185);
     min-width: fit-content;
-    max-width: 60%;
+    max-width: 50%;
     max-height: 100%;
+    border-radius: 10px;
 }
 
 .head
 {
-    font-weight: bold; color:rgb(43, 201, 190);
+    font-weight: bold; color:rgb(131, 68, 17) ;
 }
 
-.border-color
+.sub
 {
-    border-color: rgb(43, 201, 190);
-    outline-color: rgb(43, 201, 190);
+    /* border-color: rgb(43, 201, 190);
+    outline-color: rgb(43, 201, 190); */
+    background-color: rgb(131, 68, 17) ;
+    border-color: rgba(131, 68, 17, 0.712);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.sub:hover
+{
+    background-color: rgb(99, 53, 16) ;
+    border-color: rgba(99, 53, 16, 0.712);
+}
+
+input
+{
+    background-color: transparent;
+    border-color: rgba(99, 53, 16, 0.712);
+}
+
+input:active
+{
+    background-color: transparent;
+    border-color: rgba(99, 53, 16, 0.712);
 }
 
 .error
 {
     color:red;
 }
+

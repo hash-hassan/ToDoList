@@ -1,7 +1,7 @@
 
 
 <div class="m-auto rounded desktop p-4">
-    <p style="font-weight: 600; font-size: 18px;">{{data.head}}</p>
+    <p style="font-weight: 600; font-size: 18px;" class="text-center">{{data.head}}</p>
     <form [formGroup]="modalForm" (ngSubmit) = onSubmit()>
         <div class="formGroup">
             <input type="text" formControlName = "_input" class="form-control stretched" placeholder = {{data.placeholder}} >

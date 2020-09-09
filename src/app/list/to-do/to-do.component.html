@@ -4,33 +4,31 @@
         <div class="col-8 foreFront my-auto px-0 my-auto">
             <div class="row">
                 <div class="col-5 listArea m-0 pt-4 pb-4 pl-4 ">
-                    <h3 class="head fontSize">LISTS</h3>
-                    <div class="overflow-auto w-100 mt-3 mr-3 mb-2 list">
-                        <div *ngFor="let item of arr;let i = index">
-                            <div class="item py-2 rounded pl-2" (click)="itemClick(i)" >
-                                {{item.name}}
-                                <button class="btn rounded py-0 px-1 mx-1 float-right delete" (click) = 'deleteTask(i)'><i class="fa fa-trash"></i></button>
-                                <button class="btn rounded py-0 px-1 float-right edit" (click) = 'editTask(i)'><i class="fa fa-pencil-square-o"></i></button>
-                            </div>
-                            <!-- <div *ngIf="contextmenu">
-                                <app-contextmenu [x]="contextmenuX" [y]="contextmenuY"></app-contextmenu>
-                            </div> -->
-                        </div>
+                    <div class="logo">
+                        <h3 class="head fontSize">LISTS</h3>
                     </div>
-
-                    <!-- <button class="btn mx-auto desktop border-dark float-left fontSize text-center"
-                            >+</button> -->
-                    <button class="btn rounded-circle float-left desktop" (click)='newList()'><i
-                            class="fa fa-plus"></i></button>
-
+                    <div class="overflow-auto w-100 mt-3 mr-3 mb-2 list">                    
+                        <ul class="nav stretched">
+                            <li *ngFor="let item of arr;let i = index" class="nav-item stretched">
+                                <div class="item py-2 rounded pl-2" (click)="itemClick(i)" >
+                                    {{item.name}}
+                                    <button class="btn rounded py-0 px-1 mx-1 float-right delete" (click) = 'deleteTask(i)'><i class="fa fa-trash"></i></button>
+                                    <button class="btn rounded py-0 px-1 float-right edit" (click) = 'editTask(i)'><i class="fa fa-pencil-square-o"></i></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn rounded-circle float-left" (click)='newList()'><i
+                        class="fa fa-plus"></i></button>
                 </div>
+
                 <div class="col-7 toDoArea pt-4 pb-4 pr-4">
                     <app-to-do-child [data]="data"></app-to-do-child>
                 </div>
             </div>
         </div>
         <div class="col-2">
-            <a><button class="btn border-dark btn-cancel rounded float-right desktop m-2" (click)=signOut()>Sign Out</button></a>
+            <a><button class="btn border-dark btn-cancel rounded float-right m-2" (click)=signOut()>Sign Out</button></a>
         </div>
 
     </div>

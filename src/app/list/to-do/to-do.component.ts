@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { ListMessageService } from '../list-message.service'
 import { SingleInputModalComponent } from '../single-input-modal/single-input-modal.component'
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 
 import { ListDataModel } from '../listDataModel'
 import { CurrentUserService } from 'src/app/current-user.service';
@@ -65,7 +65,11 @@ export class ToDoComponent implements OnInit, OnChanges {
     this.data.preFill = ""
     this.data.option = 0;
     console.log(this.data)
-    const modalRef = this.modalService.open(SingleInputModalComponent,{centered:true});
+    const modalRef = this.modalService.open(SingleInputModalComponent,{
+      centered: true,
+      backdrop: false,
+      keyboard: false
+      });
     modalRef.componentInstance.data = this.data;
     //this.router.navigate(['./list/new'])
   }
@@ -110,7 +114,11 @@ export class ToDoComponent implements OnInit, OnChanges {
     this.data.preFill = this.arr[val].name
     this.data.listIndex = val
     this.data.option = 1;
-    const modalRef = this.modalService.open(SingleInputModalComponent,{centered:true});
+    const modalRef = this.modalService.open(SingleInputModalComponent,{
+      centered: true,
+      backdrop: false,
+      keyboard: false
+      });
     modalRef.componentInstance.data = this.data;
     //this.router.navigate(['./list/editList', {list: val}]);
   }

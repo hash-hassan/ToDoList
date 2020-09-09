@@ -28,7 +28,7 @@
 
 .listArea
 {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.801);
     height: fit-content;
     border-radius: 10px 0px 0px 10px;
 }
@@ -52,30 +52,38 @@
 
 .toDoArea
 {
-    background-color: rgb(248, 248, 248);   
+    background-color: rgba(255, 255, 255, 0.637);   
     border-radius: 0px 10px 10px 0px;
     width: fit-content;
 }
 
 .list
 {
-    height: 60vh;
+    height: 55vh;
 }
 
 .desktop
 {
-    background-color: rgb(43, 201, 190);
+    background-image: url(../../../assets/image.jpg);
+    height: 100%;
+    color: black;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .head
 {
-    font-weight: bold; color:rgb(43, 201, 190);
+    font-weight: bold; color:rgb(161, 93, 37);
 }
 
 .border-color
 {
-    border-color: rgb(43, 201, 190);
-    outline-color: rgb(43, 201, 190);
+    border-color: rgb(161, 93, 37);
+    outline-color: rgb(161, 93, 37);
 }
 
 .item
@@ -86,7 +94,7 @@
 
 .item:hover
 {
-    background-color: rgb(43, 201, 190,0.5);
+    background-color: rgb(161, 93, 37,0.5);
 }
 
 .fontSize
@@ -108,13 +116,22 @@
 
 .edit
 {
-    background-color: teal;
+    background-color: rgb(161, 93, 37);
     color: whitesmoke;
 }
 
-
-.btn-cancel:hover
+button
 {
-    background-color: crimson;
-    
+    /* border-color: rgb(43, 201, 190);
+    outline-color: rgb(43, 201, 190); */
+    background-color: rgb(143, 81, 31);
+    border-color: rgba(131, 68, 17, 0.712);
+    color: whitesmoke;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+button:hover
+{
+    background-color: rgb(114, 62, 19) ;
+    border-color: rgba(99, 53, 16, 0.712);
 }

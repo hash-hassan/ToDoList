@@ -5,7 +5,7 @@
       
       <div class="col-sm-4 my-auto foreFront mx-auto p-sm-4">
        
-          <h2 class="pb-sm-3 head">SIGN UP</h2>
+          <h2 class="pb-sm-3 head text-center">SIGN UP</h2>
           <form #signUp = "ngForm" (ngSubmit) = "onSubmit(signUp.value)" class="w-100">
             <div class="form-group has-feedback">
               <!-- <i class="fas fa-envelope icon form-control-feedback"></i>         -->
@@ -18,10 +18,10 @@
               <span>Username or password is incorrect</span>
             </div>
             <div class="d-flex align-items-end">
-              <button [disabled] = "signUp.invalid" type="submit" class="btn ml-auto desktop border-color">Sign up!</button>
+              <button [disabled] = "signUp.invalid" type="submit" class="btn btn-primary sub ml-auto">Sign up!</button>
             </div>
           </form>
-        <p class="pt-sm-4 text-center">Alredy got an account?<br> Login here!</p>
+        <p class="pt-sm-4 text-center">Already got an account?<br> Login here!</p>
         
       </div>
       

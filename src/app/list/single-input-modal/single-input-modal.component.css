@@ -1,7 +1,18 @@
-.foreFront
+
+input
 {
-    background-color: white;
+    background-color: transparent;
+    color: black;
+    font-family: sans-serif;
+    border-color: rgb(114, 62, 19);
 }
+
+input:focus
+{
+    background-color: transparent;
+    border-color: rgb(114, 62, 19);
+}
+
 .stretched
 {
     width: 100%;
@@ -9,7 +20,8 @@
 
 .desktop
 {
-    background-color: rgb(43, 201, 190);
+    background-color: rgb(241, 238, 236);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .btn-submit
@@ -19,6 +31,12 @@
 
 .btn-cancel:hover
 {
-    background-color: crimson;
+    background-color: rgb(114, 62, 19) ;
+    border-color: rgba(99, 53, 16, 0.712);
+    color: whitesmoke;
     
+}
+
+.modal-backdrop {
+    background-color: rgba(0,0,0,.0001) !important;
 }

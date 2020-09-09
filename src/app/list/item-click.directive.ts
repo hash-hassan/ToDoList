@@ -9,9 +9,9 @@ export class ItemClickDirective {
 
   @HostListener('click') onClick()
   {
-    if (this.el.nativeElement.style.backgroundColor == 'rgb(238, 238, 238)')
+    if (this.el.nativeElement.style.backgroundColor == 'rgba(143, 81, 31, 0.5)')
     {
-      this.el.nativeElement.style.backgroundColor = 'white'
+      this.el.nativeElement.style.backgroundColor = 'whitesmoke'
     }
     else
     {
@@ -23,7 +23,7 @@ export class ItemClickDirective {
   {
     // console.log("hahahhaha")
     
-    this.el.nativeElement.style.backgroundColor = 'rgb(238, 238, 238)'
+    this.el.nativeElement.style.backgroundColor = 'rgba(143, 81, 31, 0.5)'
     
     
     // background-color: rgb(248, 248, 248);
