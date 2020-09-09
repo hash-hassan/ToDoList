@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CurrentUserService } from '../../current-user.service'
+import { CurrentUserService } from '../../Services/current-user.service'
 
 @Component({
   selector: 'app-signup',

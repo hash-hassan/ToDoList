@@ -6,7 +6,7 @@ import { SingleInputModalComponent } from '../single-input-modal/single-input-mo
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 
 import { ListDataModel } from '../listDataModel'
-import { CurrentUserService } from 'src/app/current-user.service';
+import { CurrentUserService } from 'src/app/Services/current-user.service';
 
 @Component({
   selector: 'app-to-do',
@@ -83,11 +83,6 @@ export class ToDoComponent implements OnInit, OnChanges {
     //ToDoComponent.selected = this.selectedIndex;
   }
 
-  signOut()
-  {
-    this.currentUser.clear()
-    this.router.navigate(['/'])
-  }
 
   deleteTask(index)
   {

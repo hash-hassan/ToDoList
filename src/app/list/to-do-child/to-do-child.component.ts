@@ -2,7 +2,7 @@ import { Component, OnInit, Input, OnChanges, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ListMessageService } from '../list-message.service';
 import { ListDataModel } from '../listDataModel';
-import { CurrentUserService } from 'src/app/current-user.service';
+import { CurrentUserService } from 'src/app/Services/current-user.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { SingleInputModalComponent } from '../single-input-modal/single-input-modal.component';
 

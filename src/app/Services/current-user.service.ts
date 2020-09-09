@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { UserModel } from './user-model'
-import { ToDoComponent } from './list/to-do/to-do.component';
+import { UserModel } from '../user-model'
+import { ToDoComponent } from '../list/to-do/to-do.component';
 
 @Injectable({
   providedIn: 'root'

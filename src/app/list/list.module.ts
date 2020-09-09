@@ -8,9 +8,10 @@ import { ItemClickDirective } from './item-click.directive';
 import { ToDoChildComponent } from './to-do-child/to-do-child.component';
 import { ListMessageService } from './list-message.service';
 import { SingleInputModalComponent } from './single-input-modal/single-input-modal.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [ToDoComponent, ItemClickDirective, ToDoChildComponent, SingleInputModalComponent],
+  declarations: [ToDoComponent, ItemClickDirective, ToDoChildComponent, SingleInputModalComponent, HeaderComponent],
   imports: [
     CommonModule,
     ListRoutingModule,

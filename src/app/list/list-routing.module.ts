@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ToDoComponent } from './to-do/to-do.component'
-import { AuthGuardGuard } from '../auth-guard.guard'
-import { IsSelectedGuard } from '../is-selected.guard'
-import { IsNotSignedInGuard } from '../is-signed-in.guard';
+import { AuthGuardGuard } from '../Guards/auth-guard.guard'
 
 const routes: Routes = [
   {

@@ -1,0 +1,15 @@
+button
+{
+    /* border-color: rgb(43, 201, 190);
+    outline-color: rgb(43, 201, 190); */
+    background-color: rgb(143, 81, 31);
+    border-color: rgba(131, 68, 17, 0.712);
+    color: whitesmoke;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+button:hover
+{
+    background-color: rgb(114, 62, 19) ;
+    border-color: rgba(99, 53, 16, 0.712);
+}
