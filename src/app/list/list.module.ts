@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { ListRoutingModule } from './list-routing.module';
@@ -16,7 +18,8 @@ import { HeaderComponent } from './header/header.component';
     CommonModule,
     ListRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: []
 })
