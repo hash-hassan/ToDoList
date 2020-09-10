@@ -11,9 +11,9 @@
                         <h3 class="head fontSize">LISTS</h3>
                     </div>
                     <div class="overflow-auto w-100 mt-3 mr-3 mb-2 list">                    
-                        <ul class="nav stretched">
-                            <li *ngFor="let item of arr;let i = index" class="nav-item stretched">
-                                <div class="item py-2 rounded pl-2" (click)="itemClick(i)" >
+                        <ul #item class="nav stretched">
+                            <li *ngFor="let item of arr;let i = index" class="nav-item rounded stretched">
+                                <div class="item py-2 pl-2" (click)="itemClick(i)" >
                                     {{item.name}}
                                     <button class="btn rounded py-0 px-1 mx-1 float-right delete" (click) = 'deleteTask(i)'><i class="fa fa-trash"></i></button>
                                     <button class="btn rounded py-0 px-1 float-right edit" (click) = 'editTask(i)'><i class="fa fa-pencil-square-o"></i></button>

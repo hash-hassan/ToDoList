@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck, ViewChild, OnChanges } from '@angular/core';
+import { Component, OnInit, DoCheck, ViewChild, OnChanges, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { ListMessageService } from '../list-message.service'
@@ -16,12 +16,14 @@ import { CurrentUserService } from 'src/app/Services/current-user.service';
 
 export class ToDoComponent implements OnInit {
 
+  @ViewChild('item') listItem:ElementRef
 
   constructor(
     private router:Router, 
     private listService:ListMessageService, 
     private currentUser:CurrentUserService,
-    private modalService: NgbModal) 
+    private modalService: NgbModal,
+    private elRef:ElementRef) 
   { }
 
   arr:ListDataModel[] = []
@@ -74,6 +76,14 @@ export class ToDoComponent implements OnInit {
     console.log(index)
     console.log("called from itemClick")
     this.listService.listIndex(index)
+    //this.elRef.nativeElement.querySelector()
+    for(let  i = 0; i < this.listItem.nativeElement.childElementCount; i++)
+    {
+      this.listItem.nativeElement.childNodes[i].style.backgroundColor = 'rgba(255, 255, 255, 0)'
+    }
+    this.listItem.nativeElement.childNodes[index].style.backgroundColor = 'rgb(114, 62, 19)'
+    this.listItem.nativeElement.childNodes[index].style.color = 'white'
+
     //this.selectedIndex = item
     //ToDoComponent.selected = this.selectedIndex;
   }
