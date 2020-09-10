@@ -80,6 +80,7 @@ export class ToDoComponent implements OnInit {
     for(let  i = 0; i < this.listItem.nativeElement.childElementCount; i++)
     {
       this.listItem.nativeElement.childNodes[i].style.backgroundColor = 'rgba(255, 255, 255, 0)'
+      this.listItem.nativeElement.childNodes[i].style.color = 'black'
     }
     this.listItem.nativeElement.childNodes[index].style.backgroundColor = 'rgb(114, 62, 19)'
     this.listItem.nativeElement.childNodes[index].style.color = 'white'
@@ -91,7 +92,7 @@ export class ToDoComponent implements OnInit {
 
   deleteTask(index)
   {
-    if(confirm("Are you sure you want to Delete this item")) 
+    if(confirm("Are you sure you want to Delete this item?")) 
     {
       if (this.listService.listArray.length - 1 == index)
       {

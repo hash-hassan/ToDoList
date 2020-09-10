@@ -79,7 +79,7 @@ export class ToDoChildComponent implements OnInit {
 
   deleteTask(index)
   {
-    if(confirm("Are you sure you want to Delete this item")) 
+    if(confirm("Are you sure you want to Delete this item?")) 
     {
       if (this.listObj.tasks.length - 1 == index)
       {
