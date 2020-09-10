@@ -14,7 +14,7 @@ import { CurrentUserService } from 'src/app/Services/current-user.service';
   styleUrls: ['./to-do.component.css']
 })
 
-export class ToDoComponent implements OnInit, OnChanges {
+export class ToDoComponent implements OnInit {
 
 
   constructor(
@@ -51,11 +51,6 @@ export class ToDoComponent implements OnInit, OnChanges {
       this.listService.listIndex(-1)
     }
     console.log(this.data)
-  }
-
-  ngOnChanges()
-  {
-    console.log("this is changed data",this.data)
   }
 
   newList()
