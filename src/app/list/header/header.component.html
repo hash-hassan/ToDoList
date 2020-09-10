@@ -1,36 +1,30 @@
 <nav class="navbar navbar-expand-md navbar-light bg-transparent">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <span class="navbar-brand" style="cursor: pointer;">YouDo</span>
+    <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+      <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-            
-
-        </ul>
-
-        <div ngbDropdown display="dynamic" placement="bottom-right">
-            <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">
-              <i class="fa fa-user"></i>
-            </a>
-            <div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
-              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Settings</a>
-              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">My Profile</a>
-              <div class="dropdown-divider"></div>
-              <a ngbDropdownItem href="#" (click)="signOut()">Sign Out</a>
-            </div>
+  
+    <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+      <ul class="navbar-nav w-100">
+        <li class="nav-item active">
+            <a class="nav-link" href="#" (click)="$event.preventDefault()">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <div ngbDropdown class="ml-auto" display="dynamic" placement="bottom-right">
+        <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">
+          <i class="fa fa-user"></i>
+        </a>
+        <div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+          <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Settings</a>
+          <a ngbDropdownItem href="#" (click)="$event.preventDefault()">My Profile</a>
+          <div class="dropdown-divider"></div>
+          <a ngbDropdownItem href="#" (click)="signOut()">Sign Out</a>
         </div>
-
+        </div>
+                
+      </ul>
+      
+      
     </div>
-</nav>
+
+    
+  </nav>

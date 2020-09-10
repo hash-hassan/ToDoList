@@ -13,6 +13,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(private currentUser:CurrentUserService, private router:Router) { }
 
+  collapsed = true;
+
   ngOnInit(): void {
   }
 
